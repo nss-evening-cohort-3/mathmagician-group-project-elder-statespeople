@@ -8,5 +8,23 @@ namespace Mathmagician
 {
    public class Integer
     {
+       // public int IntegerValue {get; set;}
+
+       public List<int> IntegerList = new List<int>();
+
+        public void GenerateInteger(int numInt)
+        {
+            for(int i = 0; i < numInt; i++)
+            {
+                IntegerList.Add(i);
+                Console.WriteLine(i);
+            }
+        }
+        
+        public void ThrowException()
+        {
+            //If numInt is not an integer
+            //then throw new ArgumentException();
+        }
     }
 }
