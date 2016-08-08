@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Mathmagician
 {
-    public class Primes
+    public class Primes : Numbs
     {
         public int[] GeneratePrimes(int count)
         {
@@ -46,16 +46,5 @@ namespace Mathmagician
             }
             return c;
         }
-
-        public string PrintPrimes(int[] primeNums)
-        {
-            string output = "";
-            foreach (int p in primeNums)
-            {
-                output += " " + p + " ";
-            }
-            return output;
-        }
-        
     }
 }

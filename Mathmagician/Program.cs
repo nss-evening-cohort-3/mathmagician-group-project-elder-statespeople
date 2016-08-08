@@ -30,13 +30,19 @@ namespace Mathmagician
                         loopCount = false;
                         break; */
                     case "Primes":
-                        HowMany hmPrimes = new HowMany();
+                        Console.WriteLine("How many should I print?");
+                        string numTimesStringPrimes = Console.ReadLine();
                         Primes p = new Primes();
-                        int numberOfPrimes = hmPrimes.GetNumber();
-                        int[] primes = p.GeneratePrimes(numberOfPrimes);
-                        string outputPrimes = p.PrintPrimes(primes);
-                        Console.WriteLine("The " + numberOfPrimes + " Prime Numbers are: "  + outputPrimes);
-                        loopCount = false;
+                        int numberOfPrimes = p.GetNumber(numTimesStringPrimes);
+                        if (numberOfPrimes > 0)
+                        {
+                            int[] primes = p.GeneratePrimes(numberOfPrimes);
+                            string outputPrimes = p.PrintOut(primes);
+                            Console.WriteLine("The " + numberOfPrimes + " Prime Numbers are: " + outputPrimes);
+                            loopCount = false;
+                        }
+                        else
+                            goto default;
                         break;
                    /* case "Fibonacci":
                         HowMany hmFibs = new HowMany();
@@ -55,16 +61,22 @@ namespace Mathmagician
                         string outputEvens = e.PrintEvens(evens);
                         Console.WriteLine("The " + numberOfEvens + " Even Numbers are: " + outputEvens);
                         loopCount = false;
-                        break;
-                    case "Odd":
-                        HowMany hmOdds = new HowMany();
-                        Odds o = new Odds();
-                        int numberOfOdds = hmOdds.GetNumber();
-                        int[] odds = o.GenerateOdds(numberOfOdds);
-                        string outputOdds = o.PrintOdds(odds);
-                        Console.WriteLine("The " + numberOfOdds + " Prime Numbers are: " + outputOdds);
-                        loopCount = false;
                         break; */
+                    case "Odd": 
+                        Odds o = new Odds();
+                        Console.WriteLine("How many should I print?");
+                        string numTimesStringOdds = Console.ReadLine();
+                        int numberOfOdds = o.GetNumber(numTimesStringOdds);
+                        if (numberOfOdds > 0)
+                        {
+                            int[] odds = o.GenerateOdds(numberOfOdds);
+                            string outputOdds = o.PrintOut(odds);
+                            Console.WriteLine("The " + numberOfOdds + " Odd Numbers are: " + outputOdds);
+                            loopCount = false;
+                        }
+                        else
+                            goto default;
+                        break; 
                     default:
                         Console.WriteLine("Whoops!");
                         break;
