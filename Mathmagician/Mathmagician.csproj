@@ -44,8 +44,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="HowMany.cs" />
     <Compile Include="Integer.cs" />
+    <Compile Include="Numbs.cs" />
+    <Compile Include="Odds.cs" />
     <Compile Include="Primes.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

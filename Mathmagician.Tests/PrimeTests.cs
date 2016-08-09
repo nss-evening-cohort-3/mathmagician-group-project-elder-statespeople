@@ -24,12 +24,19 @@ namespace Mathmagician.Tests
         }
 
         [TestMethod]
-        public void TestPrintPrimes()
+        public void TestLengthOfPrimesArray()
         {
             Primes p = new Primes();
-            int[] testP = p.GeneratePrimes(10);
-            string output = p.PrintPrimes(testP);
-            Assert.AreEqual(" 2  3  5  7  11  13  17  19  23  29 ", output);
+            int[] testP = p.GeneratePrimes(200);
+            Assert.AreEqual((int)200, testP.Length);
         }
+
+        [TestMethod]
+        public void TestInstanceofPrimes()
+        {
+            Primes p = new Primes();
+            Assert.IsNotNull(p);
+        }
+
     }
 }
