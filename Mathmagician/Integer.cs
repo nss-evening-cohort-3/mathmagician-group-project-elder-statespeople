@@ -21,10 +21,6 @@ namespace Mathmagician
             }
         }
         
-        public void ThrowException()
-        {
-            //If numInt is not an integer
-            //then throw new ArgumentException();
-        }
+        
     }
 }

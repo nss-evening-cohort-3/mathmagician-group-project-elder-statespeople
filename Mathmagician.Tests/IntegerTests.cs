@@ -30,13 +30,14 @@ namespace Mathmagician.Tests
             //Assert
             Assert.IsNotNull(IntVal);
         }
-        [ExpectedException(typeof(ArgumentOutOfRangeException))]
         [TestMethod]
-        public void TestCreatingOutOfRangeException()
+        public void OutOfRangeTest()
         {
             Integer my_int = new Integer();
             my_int.GenerateInteger(5);
-            int IntVal = my_int.IntegerList[9];
+           
+            //Assert
+            Assert.AreEqual(5, my_int.IntegerList.Count);
         }
     }
 }
