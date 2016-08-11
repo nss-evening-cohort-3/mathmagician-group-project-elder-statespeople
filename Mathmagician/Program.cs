@@ -17,17 +17,22 @@ namespace Mathmagician
             {
                 Console.WriteLine("What would you like for me to do?");
                 string command = Console.ReadLine();
-                
+
                 switch (command)
                 {
                     case "Integers":
-                        HowMany hmInt = new HowMany();
+                        Console.WriteLine("How many should I print?");
+                        string numInteger = Console.ReadLine();
                         Integer i = new Integer();
-                        int numberOfInts = hmInt.GetNumber();
-                        i.GenerateIntegers(numberOfInts);
-                        //string outputInts = i.PrintIntegers(ints);
-                        //Console.WriteLine("The " + numberOfInts + " Integers are: " + outputInts);
-                        loopCount = false;
+                        int numberOfInts = i.GetNumber(numInteger); 
+                        if (numberOfInts > 0)
+                        {
+                            List<int> IntList = i.GenerateInteger(numberOfInts);
+                            string outputInts = i.PrintList(IntList);
+                            Console.WriteLine("The " + numberOfInts + " Integers are: " + outputInts);
+                            loopCount = false;
+                        }else
+                            goto default;
                         break;
                     case "Primes":
                         Console.WriteLine("How many should I print?");
@@ -45,22 +50,34 @@ namespace Mathmagician
                             goto default;
                         break;
                     case "Fibonacci":
-                        HowMany hmFibs = new HowMany();
+                        Console.WriteLine("How many should I print?");
+                        string numFib = Console.ReadLine();
                         Fibonacci f = new Fibonacci();
-                        int numberOfFibs = hmFibs.GetNumber();
-                        f.GenerateFibs(numberOfFibs);
-                        //string outputFibs =f.PrintFibs(fibs);
-                        //Console.WriteLine("The " + numberOfFibs + " Fibonacci Numbers are: " + outputFibs);
-                        loopCount = false;
+                        int numOfFib = f.GetNumber(numFib);
+                        if (numOfFib > 0)
+                        {
+                            List<int> fibList = f.GenerateFibonacci(numOfFib);
+                            string outputFibs =f.PrintList(fibList);
+                            Console.WriteLine("The " + numOfFib + " Fibonacci Numbers are: " + outputFibs);
+                            loopCount = false;
+                        }
+                        else
+                            goto default;
                         break;
                     case "Even":
-                        HowMany hmEvens = new HowMany();
+                        Console.WriteLine("How many should I print?");
+                        string numEven = Console.ReadLine();
                         Even e = new Even();
-                        int numberOfEvens = hmEvens.GetNumber();
-                        e.GenerateEvens(numberOfEvens);
-                        //string outputEvens = e.PrintEvens(evens);
-                        //Console.WriteLine("The " + numberOfEvens + " Even Numbers are: " + outputEvens);
-                        loopCount = false;
+                        int numberOfEvens = e.GetNumber(numEven);                 
+                        if (numberOfEvens > 0)
+                        {
+                            List<int> evenList = e.GenerateEven(numberOfEvens);
+                            string outputEvens = e.PrintList(evenList);
+                            Console.WriteLine("The " + numberOfEvens + " Even Numbers are: " + outputEvens);
+                            loopCount = false;
+                        }
+                        else
+                            goto default;
                         break;
                     case "Odd": 
                         Odds o = new Odds();
