@@ -24,7 +24,7 @@ namespace Mathmagician.Tests
         }
 
         [TestMethod]
-        public void FibNotNullTest()
+        public void TestValueOfIndex0()
         {
             Fibonacci my_fib = new Fibonacci();
             List<int> temp = my_fib.GenerateFibonacci(9);
