@@ -27,42 +27,40 @@ namespace Mathmagician.Tests
         public void FibNotNullTest()
         {
             Fibonacci my_fib = new Fibonacci();
-            my_fib.GenerateFibonacci(5);
-            int temp = my_fib.FibonacciList[0];
+            List<int> temp = my_fib.GenerateFibonacci(9);
 
             //Assert
-            Assert.IsNotNull(temp);
+            Assert.IsTrue(temp[0] == 0);
         }
 
        [TestMethod]
-        public void FibTrueTest()
+        public void TestValueOfIndex3()
         {
             Fibonacci my_fib = new Fibonacci();
-            my_fib.GenerateFibonacci(5);
-            int temp = my_fib.FibonacciList[3];
+           List<int> temp =  my_fib.GenerateFibonacci(5);  
 
             //Assert
-            Assert.IsTrue(temp == 2);
+            Assert.IsTrue(temp[3] == 2);
         }
 
         [TestMethod]
-        public void FibListTest1()
+        public void TestFibListWith5Elements()
         {
             Fibonacci my_fib = new Fibonacci();
-            my_fib.GenerateFibonacci(5);
+           List<int>temp =  my_fib.GenerateFibonacci(5);
 
             //Assert
-            CollectionAssert.AreEqual(new List <int>{0,1,1,2,3}, my_fib.FibonacciList);
+            CollectionAssert.AreEqual(new List <int>{0,1,1,2,3}, temp);
         }
 
         [TestMethod]
-        public void FibListTest2()
+        public void TestFibListWith9Elements()
         {
             Fibonacci my_fib = new Fibonacci();
-            my_fib.GenerateFibonacci(9);
+           List<int> temp =  my_fib.GenerateFibonacci(9);
 
             //Assert
-            CollectionAssert.AreEqual(new List<int> { 0, 1, 1, 2, 3, 5, 8, 13, 21 }, my_fib.FibonacciList);
+            CollectionAssert.AreEqual(new List<int> { 0, 1, 1, 2, 3, 5, 8, 13, 21 }, temp);
         }
 
     }

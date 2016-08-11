@@ -6,21 +6,20 @@ using System.Threading.Tasks;
 
 namespace Mathmagician
 {
-   public class Integer
+   public class Integer : Numbs
     {
-       // public int IntegerValue {get; set;}
+       
+       private List<int> IntegerList = new List<int>();
 
-       public List<int> IntegerList = new List<int>();
-
-        public void GenerateInteger(int numInt)
+        public List<int> GenerateInteger(int numInt)
         {
             for(int i = 0; i < numInt; i++)
             {
                 IntegerList.Add(i);
-                Console.WriteLine(i);
+               // Console.WriteLine(i);
             }
-        }
-        
+            return IntegerList;
+        }     
         
     }
 }

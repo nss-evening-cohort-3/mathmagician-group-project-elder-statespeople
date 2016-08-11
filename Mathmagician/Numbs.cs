@@ -31,5 +31,15 @@ namespace Mathmagician
             }
             return output;
         }
+
+        public string PrintList(List<int> Nums) 
+        {
+            string output = "";
+            foreach (int n in Nums)
+            {
+                output += " " + n + " ";
+            }
+            return output;
+        }
     }
 }

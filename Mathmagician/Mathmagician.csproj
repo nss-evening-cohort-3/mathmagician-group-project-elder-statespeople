@@ -44,7 +44,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="HowMany.cs" />
     <Compile Include="Even.cs" />
     <Compile Include="Fibonacci.cs" />
     <Compile Include="Integer.cs" />

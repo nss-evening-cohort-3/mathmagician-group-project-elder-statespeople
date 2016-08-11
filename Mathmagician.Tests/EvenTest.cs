@@ -24,27 +24,23 @@ namespace Mathmagician.Tests
         }
        
          [TestMethod]
-         public void TestEvenListCount()
+         public void Test8thValueInEvenList()
         {
             Even my_even = new Even();
-            my_even.GenerateEven(8);
+           List<int> temp =  my_even.GenerateEven(8);
 
             //Assert()
-            Assert.AreEqual(8, my_even.EvenList.Count);   
+            Assert.AreEqual(14, temp[7]);   
         }
 
+        
         [TestMethod]
-        public void TestEvenType()
+        public void Test0thValueInEvenList()
         {
             Even my_even = new Even();
-            Assert.IsInstanceOfType(my_even, typeof(Even));
-        }
+            List<int> temp = my_even.GenerateEven(1);
 
-        [TestMethod]
-        public void TestListLength()
-        {
-            Even my_even = new Even();
-            Assert.AreEqual(0, my_even.EvenList.Count);
+            Assert.IsTrue(0 == temp[0]);
         }
 
     }

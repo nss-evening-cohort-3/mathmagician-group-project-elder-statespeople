@@ -6,23 +6,23 @@ using System.Threading.Tasks;
 
 namespace Mathmagician
 {
-   public class Even
+   public class Even : Numbs
     {
        // public int EvenValue {get; set;}
 
-        public List<int> EvenList = new List<int>();
+        private List<int> EvenList = new List<int>();
 
-        public void GenerateEven(int numEven)
+        public List<int> GenerateEven(int numEven)
         {
             // Console.Write("{0} ", c);
             var j = 0;
             for (int i = 0; i < numEven; i++)
             {           
                 EvenList.Add(j);
-                Console.Write(" " + j + " ");
+                //Console.Write(" " + j + " ");
                 j = j + 2;   
             }
-            Console.WriteLine();
+            return EvenList;
         }
 
         /*public void CheckIfEven(int my_even)
