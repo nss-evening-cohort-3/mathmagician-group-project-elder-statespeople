@@ -32,8 +32,7 @@ namespace Mathmagician.Tests
             //Assert()
             Assert.AreEqual(14, temp[7]);   
         }
-
-        
+     
         [TestMethod]
         public void Test0thValueInEvenList()
         {
@@ -42,6 +41,5 @@ namespace Mathmagician.Tests
 
             Assert.IsTrue(0 == temp[0]);
         }
-
     }
 }

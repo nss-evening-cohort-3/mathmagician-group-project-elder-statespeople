@@ -16,10 +16,8 @@ namespace Mathmagician
             for(int i = 0; i < numInt; i++)
             {
                 IntegerList.Add(i);
-               // Console.WriteLine(i);
             }
             return IntegerList;
-        }     
-        
+        }        
     }
 }

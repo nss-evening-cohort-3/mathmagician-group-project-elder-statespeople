@@ -24,9 +24,7 @@ namespace Mathmagician
                         Console.WriteLine("How many should I print?");
                         string numInteger = Console.ReadLine();
                         Integer i = new Integer();
-                        int numberOfInts = i.GetNumber(numInteger);
-                        // i.GenerateInteger(numberOfInts);
-                        
+                        int numberOfInts = i.GetNumber(numInteger); 
                         if (numberOfInts > 0)
                         {
                             List<int> IntList = i.GenerateInteger(numberOfInts);
@@ -56,7 +54,6 @@ namespace Mathmagician
                         string numFib = Console.ReadLine();
                         Fibonacci f = new Fibonacci();
                         int numOfFib = f.GetNumber(numFib);
-                        //f.GenerateFibs(numberOfFibs); 
                         if (numOfFib > 0)
                         {
                             List<int> fibList = f.GenerateFibonacci(numOfFib);
